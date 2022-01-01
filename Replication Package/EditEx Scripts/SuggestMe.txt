@@ -1,0 +1,96 @@
+// ==UserScript==
+// @name         Suggest Me
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  Send necessary data to server-side processing and show the suggestions to the users
+// @author    Saikat Mondal
+// @match     https://stackoverflow.com/posts/*/edit
+// @icon        https://cdn.freebiesupply.com/logos/large/2x/university-of-saskatchewan-1-logo-png-transparent.png
+// @grant      This research is supported by the Natural Sciences and Engineering Research Council of Canada (NSERC), and by two Canada First Research Excellence Fund (CFREF) grants coordinated by the Global Institute for Food Security (GIFS) and the Global Institute for Water Security (GIWS)
+// ==/UserScript==
+
+var processing = false;
+var beforeEdit = "";
+var debug = true;
+
+function getBeforeEditText() {
+    var el = document.getElementsByClassName('wmd-input');
+    return el['post-text'].value;
+}
+
+function getReputation() {
+    return document.querySelector('.my-profile div.-rep').innerHTML;
+}
+
+function getUsername() {
+    var element = document.querySelector('.gravatar-wrapper-24').getAttribute('title'); //href
+    return element;
+    //return element.substr(element.lastIndexOf('/') + 1);
+}
+
+(function() {
+    'use strict';
+    beforeEdit = getBeforeEditText();
+    var postBtns = document.getElementById('submit-button');
+    var container = postBtns.parentElement;
+    var checkBtn = document.createElement('a');
+    checkBtn.className = "flex--item s-btn";
+    checkBtn.innerHTML = "Suggest Me";
+    checkBtn.setAttribute('id', 'check-edit-text');
+    container.appendChild(checkBtn);
+    checkBtn.addEventListener('click', () => {
+        if (processing) return;
+        processing = true;
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://editexpert.herokuapp.com/api/v1/edit', true);
+        xhr.setRequestHeader('Content-type', 'application/json')
+        var data = {
+            preText: beforeEdit,
+            postText: getBeforeEditText(),
+            reputation: getReputation(),
+            rollbackUserName : getUsername()
+        };
+        if (debug) {
+            console.log(data);
+        }
+        xhr.onload = function () {
+            const result = JSON.parse(this.responseText);
+            alert(result.reason);
+           // if (result.hasOwnProperty('rejectProbability')) {
+                //if (result.permission == "rejected") {
+                    //document.getElementById("sidebar").innerHTML =
+                    //alert("<span style='color:#E90A0A;'> Possibility (" + result.rejectProbability + ") of rejection is high : " + result.reason +"</span>");
+
+                    //var script = document.createElement('script');
+                   // script.src = "https://unpkg.com/sweetalert/dist/sweetalert.min.js";
+                   // document.body.appendChild(script);
+
+                    //swal("hello");
+
+                   //alert('Possibility (' + result.rejectProbability + ') of rejection is high : ' + result.reason);
+                //} else {
+                    //alert('Possibility (' + result.acceptProbability + ') of acceptance is high.');
+                //}
+            //}
+            processing = false;
+        };
+
+        xhr.send(JSON.stringify(data));
+    });
+})();
+// ==UserScript==
+// @name         New Userscript
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en
+// @icon         https://www.google.com/s2/favicons?domain=google.com
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    // Your code here...
+})();

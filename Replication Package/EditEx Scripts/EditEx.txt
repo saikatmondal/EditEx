@@ -1,0 +1,38 @@
+// ==UserScript==
+// @name         EditEx
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  Create EditEx button
+// @author    Saikat Mondal
+// @match     https://stackoverflow.com/questions/*/*
+// @icon        https://cdn.freebiesupply.com/logos/large/2x/university-of-saskatchewan-1-logo-png-transparent.png
+// @grant      This research is supported by the Natural Sciences and Engineering Research Council of Canada (NSERC), and by two Canada First Research Excellence Fund (CFREF) grants coordinated by the Global Institute for Food Security (GIFS) and the Global Institute for Water Security (GIWS)
+// ==/UserScript==
+
+var elms;
+
+(function() {
+    'use strict';
+
+    elms = document.getElementsByClassName('js-suggest-edit-post js-gps-track');
+    for (var i = 0; i < elms.length; i++) {
+        elms[i].innerHTML = '<p style=" color: #FF5733; ">EditEx</p>';
+    }
+
+    elms = document.getElementsByClassName('js-edit-post js-gps-track');
+    for (var m = 0; m < elms.length; m++) {
+        elms[m].innerHTML = '<p style=" color: #FF5733; ">EditEx</p>';
+    }
+
+    elms = document.getElementsByClassName('s-btn s-btn__link js-error-click js-gps-track');
+    for (var j = 0; j < elms.length; j++) {
+        elms[j].innerHTML = '<p style=" color: #FF5733; ">EditEx</p>';
+    }
+
+    //elms = document.getElementsByClassName('js-gps-track');
+    //for (var k = 0; k < elms.length; j++) {
+    //    elms[k].innerHTML = '<p style=" color: #FF5733; ">EditEx</p>';
+    //}
+
+})();
+
