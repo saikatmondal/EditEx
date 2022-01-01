@@ -10,7 +10,7 @@
 
 **Download this paper:** [PDF](https://osf.io/sjgnz)
 
-## Materials included in the ***Replication Package*** folder
+## Materials included in the Replication Package
 
 ### Manually Analyzed Dataset ***/Replication Package/Manually Analyzed Dataset/*** 
 
