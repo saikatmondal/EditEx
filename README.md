@@ -4,7 +4,9 @@
 
 ## Accepted Protocol
 
-    Saikat Mondal, Gias Uddin, and Chanchal K. Roy. "Automatic Identification of Rollback Edit with Reasons in Stack Overflow Q&A Site." IEEE International Conference on Software     Maintenance and Evolution (ICSME). IEEE, 2020.
+    Saikat Mondal, Gias Uddin, and Chanchal K. Roy. "Automatic Identification of Rollback 
+    Edit with Reasons in Stack Overflow Q&A Site." IEEE International Conference on Software 
+    Maintenance and Evolution (ICSME). IEEE, 2020.
 
 **Download this paper:** [PDF](https://osf.io/sjgnz)
 
