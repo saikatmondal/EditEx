@@ -12,8 +12,6 @@
 
 ## Materials included in the ***Replication Package*** folder
 
-### Manually Analyzed Dataset
+### Manually Analyzed Dataset ***/Replication Package/Manually Analyzed Dataset/***
 
-***EMSE-Dataset*** 
-
-* `XXXX` contain manually investigate ............................
+* `ManuallyAnalyzedDataset.csv` contains our manually investigated dataset.
