@@ -15,3 +15,19 @@
 #### Manually Analyzed Dataset: ***/Replication Package/Manually Analyzed Dataset/*** 
 
 * `ManuallyAnalyzedDataset.csv` contains our manually investigated dataset.
+
+#### EditEx Scripts: ***/Replication Package/EditEx Scripts/*** 
+
+* `EditEx.txt` ....
+* `SuggestMe.txt` ....
+* Installation Video Tutorial: [Video Link](https://youtu.be/h6ILAakx0HY)
+
+#### Survey Questionaires: ***/Replication Package/Survey Questionaires/*** 
+
+* `EditEx-Survey-Control.pdf` ....
+* `EditEx-Survey-Treatment.pdf` ....
+
+#### Survey Response: ***/Replication Package/Survey Response/*** 
+
+* `EditEx-Control.csv` ....
+* `EditEx-Treatment.csv` ....
