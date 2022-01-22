@@ -18,16 +18,20 @@
 
 #### EditEx Scripts: ***/Replication Package/EditEx Scripts/*** 
 
-* `EditEx.txt` ....
-* `SuggestMe.txt` ....
+* `EditEx.txt` contains the script for the EditEx interface. First, you have to add this script to Tampermonkey. Then you will find the EditEx button in place of the Edit button of Stack Overflow.
+
+* `SuggestMe.txt` contains the script for the Suggest Me button. Similar to EditEx, you have to add this script to Tampermoneky. Then, you will find the option to get edit decisions (accept/reject) of your suggested edits and the reasons if the edits will be rejected.
+
 * Installation Video Tutorial: [Video Link](https://youtu.be/h6ILAakx0HY)
 
 #### Survey Questionaires: ***/Replication Package/Survey Questionaires/*** 
 
-* `EditEx-Survey-Control.pdf` ....
-* `EditEx-Survey-Treatment.pdf` ....
+* `EditEx-Survey-Control.pdf` is the survey form for the control group.
+
+* `EditEx-Survey-Treatment.pdf` is the form for the treatment group.
 
 #### Survey Response: ***/Replication Package/Survey Response/*** 
 
-* `EditEx-Control.csv` ....
-* `EditEx-Treatment.csv` ....
+* `EditEx-Control.csv` contains the responses given by the control group.
+
+* `EditEx-Treatment.csv` contains the responses given by the treatment group.
